@@ -59,7 +59,7 @@ const ScheduleModel = {
     },
     requestDate: {
         type: DataTypes.DATE,
-        allowNull: false
+        allowNull: false,
     },
 };
 
