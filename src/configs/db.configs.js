@@ -6,9 +6,9 @@ const db = {
   password: env.DB_PASSWORD || '',
   database: env.DB_NAME || 'Patients',
   port: env.DB_PORT || 3306,
-  // ssl: {
-  //   ca: env.SSL_CERT,
-  // }
+  ssl: {
+    ca: env.SSL_CERT,
+  }
 };
 
 module.exports = db;
