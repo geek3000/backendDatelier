@@ -3,14 +3,13 @@ const { DataTypes } = require("sequelize");
 
 const ScheduleModel = {
     code: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         primaryKey: true,
         //  autoIncrement: true
     },
     name: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: true
     },
     age: {
         type: DataTypes.INTEGER,
@@ -42,7 +41,7 @@ const ScheduleModel = {
     },
     status: {
         type: DataTypes.STRING,
-        defaultValue: "pending",
+        defaultValue: "passed",
         allowNull: true
     },
     appointmentDate: {
@@ -58,8 +57,8 @@ const ScheduleModel = {
         allowNull: false
     },
     requestDate: {
-        type: DataTypes.DATE,
-        allowNull: false,
+        type: DataTypes.DATEONLY,
+        allowNull: true,
     },
 };
 

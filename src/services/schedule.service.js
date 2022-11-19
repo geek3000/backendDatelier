@@ -7,9 +7,9 @@ async function getSchedules() {
 }
 
 
-async function getScheduleById(id) {
+async function getScheduleById(code) {
 
-    return await Schedule.findOne({where:{id}});
+    return await Schedule.findOne({ where: { code } });
 }
 
 async function createSchedule(data) {
@@ -17,13 +17,13 @@ async function createSchedule(data) {
     return await Schedule.create(data);
 }
 
-async function updateSchedule(id, {data}) {
+async function updateSchedule(code, data) {
 
-    return await Schedule.update(data, {where:{id}});
+    return await Schedule.update(data, { where: { code } });
 }
 
-async function deleteSchedule(id) {
-    return await Schedule.destroy({where:{id}});
+async function deleteSchedule(code) {
+    return await Schedule.destroy({ where: { code } });
 }
 
-module.exports = {getSchedules, getScheduleById, createSchedule, updateSchedule, deleteSchedule};
+module.exports = { getSchedules, getScheduleById, createSchedule, updateSchedule, deleteSchedule };
