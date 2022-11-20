@@ -4,7 +4,7 @@ const cors = require("cors")
 const app = express();
 const port = process.env.PORT || 3003;
 const scheduleRouter = require('./src/routes/schedule.route');
-const whitelist = ["http://localhost:3001"]
+const whitelist = ["http://localhost:3001" "https://testdat.azurewebsites.net"]
 const corsOptions = {
   origin: function (origin, callback) {
     if (!origin || whitelist.indexOf(origin) !== -1) {
